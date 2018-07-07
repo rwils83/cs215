@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1530731448 source:/root/cs215/ryan_wilson_Indv_project_week_1/main.cpp
+	<iostream>
+	<iomanip>
+	<string>
+
