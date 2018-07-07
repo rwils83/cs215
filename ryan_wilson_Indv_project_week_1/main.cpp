@@ -1,3 +1,8 @@
+/* Created By Ryan J. Wilson
+CTU CS215
+Date of last Modification: 7/7/2018
+Referenced code is from Sample Code Week 1 created by Dr. Evans in winter of 2016*/
+
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -16,6 +21,7 @@ int main()
     cout << setiosflags(ios::showpoint);
     cout << setprecision(2);
 
+    // Modified from Sample Code by Ryan J. Wilson
     for (int i=0; i<records; i++){
         if(i==0){
             cout << "Enter First Student Name(Last, First)" <<endl;
@@ -31,6 +37,7 @@ int main()
             }
             }
     cout << setfill(' ') << setw(25) << left << "Student Name" << setw(5) << right << "GPA" << endl;
+    //original code by Dr. Evans
     for (int i = 0; i < records; i++){
         string::size_type commaPos = studentName[i].find(",");  //find ","
 		lastName = studentName[i].substr(0, commaPos);	// select last name
@@ -59,7 +66,7 @@ int main()
 
 
 
-	//system("pause");
+	system("pause");
 }
 
 	return 0;
