@@ -13,6 +13,7 @@ int main()
 {
     // set the variables to use
     int records = 10;
+    char test = ' ';
     string studentName[10];
     double gpa[10];
     string lastName;
@@ -20,11 +21,31 @@ int main()
     cout << setiosflags(ios::fixed);
     cout << setiosflags(ios::showpoint);
     cout << setprecision(2);
+    cout << "Would you like to run this as test?" << endl;
+    cin >> test;
+    //set ability to run quick test to save typing
+    if (test== 'y'){
+        for (int i=0; i<records;i++){
+        studentName[i] = "test, test";
+            if (i < 3){
+            gpa[i] = i+.5;}
+            else if (i == 3){
+            gpa[i] = i;}
+            else if (i < 5 & i >3){
+            gpa[i] = i-1;}
+            else if(i > 5 & i < 9){
+            gpa[i] = i-4;}
+            else{
+            gpa[i]= i-5;}
+        }
+    }
+    else{
 
     // Modified from Sample Code by Ryan J. Wilson
     for (int i=0; i<records; i++){
         if(i==0){
             cout << "Enter First Student Name(Last, First)" <<endl;
+            cin.ignore();
             getline(cin, studentName[i]);
             cout << "Enter Student GPA" << endl;
             cin >>gpa[i];}
@@ -33,9 +54,8 @@ int main()
             cin.ignore();
             getline(cin, studentName[i]);
             cout << "Enter GPA: " << endl;
-            cin >> gpa[i];
-            }
-            }
+            cin >> gpa[i];}
+            }}
     cout << setfill(' ') << setw(25) << left << "Student Name" << setw(5) << right << "GPA" << endl;
     //original code by Dr. Evans
     for (int i = 0; i < records; i++){
@@ -66,7 +86,7 @@ int main()
 
 
 
-	system("pause");
+
 }
 
 	return 0;

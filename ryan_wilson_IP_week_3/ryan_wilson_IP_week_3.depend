@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1532330250 source:/root/cs215/ryan_wilson_IP_week_3/main.cpp
+	<iostream>
+	<fstream>
+	<string>
+
